@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(73, 70, 70);
+    padding: 120px;
+}
+
+.football {
+    width: 550px;
+    height: 300px;
+    background-color: rgb(10, 201, 10);
+    margin: 0 auto;
+    position: relative;
+    border: 5px solid white;
+}
+
+.football .ball {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: absolute;
+    animation-name: ball-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    z-index: 100;
+    background-image: url("img/person-1.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+/* .football .ball img {
+    width: 100%;
+    border-radius: 100%;
+} */
+@keyframes ball-animation {
+    0% {
+        top: 50%;
+        left: 0px;
+        transform: translate(0, -50%);
+    }
+
+    25% {
+        top: 0px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        top: 50%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+        background-image: url("img/person-2.jpg");
+
+    }
+
+    75% {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+    }
+
+    100% {
+        top: 50%;
+        left: 0px;
+        transform: translate(0, -50%);
+    }
+}
+
+.gate-left,
+.gate-right {
+    width: 70px;
+    height: 100px;
+    border: 5px solid rgba(255, 255, 255);
+    position: absolute;
+}
+
+.gate-left {
+    top: 50%;
+    left: -1%;
+    transform: translate(0, -50%);
+}
+
+.gate-right {
+    top: 50%;
+    left: 101%;
+    transform: translate(-100%, -50%);
+}
+
+.center-line {
+    border: 3px solid rgba(255, 255, 255);
+    width: 1px;
+    height: 294px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+
+.center-circle {
+    width: 150px;
+    height: 150px;
+    border: 5px solid rgba(255, 255, 255);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
